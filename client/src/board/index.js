@@ -18,7 +18,7 @@ const HealthForm = () => {
         if (!user?.id) return;
 
         try {
-            const { data } = await axios.get("http://localhost:8000/v1/health/", {
+            const { data } = await axios.get("https://health-tracker-33rv.onrender.com/v1/health/", {
                 headers: {
                     token: user.id,
                 },
@@ -45,7 +45,7 @@ const HealthForm = () => {
 
         try {
             await axios.post(
-                "http://localhost:8000/v1/health/add",
+                "https://health-tracker-33rv.onrender.com/v1/health/add",
                 newEntry,
                 {
                     headers: {
